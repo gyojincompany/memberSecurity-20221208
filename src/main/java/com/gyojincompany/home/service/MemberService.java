@@ -40,9 +40,14 @@ public class MemberService implements UserDetailsService{
 		
 		Member member = memberRepository.findByMid(mid);
 		
+		
+		
 		if(member == null ) {
 			throw new UsernameNotFoundException(mid);
 		}
+		
+		System.out.println(member.getMid());
+		System.out.println(member.getMpw());
 		
 		return User.builder()
 				.username(member.getMid())

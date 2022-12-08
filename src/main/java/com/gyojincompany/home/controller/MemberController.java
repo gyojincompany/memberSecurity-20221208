@@ -51,8 +51,8 @@ public class MemberController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/logoutOk")
-	public String logoutOk() {
-		return "index";
-	}
+//	@RequestMapping(value = "/logout")
+//	public String logoutOk() {
+//		return "index";
+//	}
 }

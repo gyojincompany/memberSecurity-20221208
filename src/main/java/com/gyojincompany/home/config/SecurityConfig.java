@@ -39,11 +39,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.loginPage("/login")//로그인 페이지 url
 			.defaultSuccessUrl("/loginOk")//로그인 성공시 이동할 url
 			.usernameParameter("mid")//로그인 시 사용할 파라미터 이름
+//			.passwordParameter("mpw")
 			.failureUrl("/loginFail")//로그인 실패시 이동할 url
 			.and()
 			.logout()
 			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))//로그아웃 url
-			.logoutUrl("/logoutOk");//로그아웃 성공시 이동할 url
+			.logoutUrl("/index");//로그아웃 성공시 이동할 url
 			
 	}
 	
